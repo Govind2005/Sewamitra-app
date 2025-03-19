@@ -79,6 +79,16 @@ Future<void> signUpWithEmail({
     }
   }
 
+//   Anonymous sign in
+
+  Future<void> signInAnonymously(BuildContext context) async {
+    try {
+      await _auth.signInAnonymously();
+    } on FirebaseAuthException catch(e) {
+      showSnackBar(context, e.message!);
+    }
+  }
+
 //   Phone Sign In
   Future<void> phoneSignIn(
       BuildContext context,
@@ -112,5 +122,23 @@ Future<void> signUpWithEmail({
         // Aut-resolution timed out...
         }
     );
+  }
+//   Sign out
+  Future<void> signOut(BuildContext context) async {
+    try {
+      await _auth.signOut();
+    } on FirebaseAuthException catch(e) {
+      showSnackBar(context, e.message!);
+    }
+  }
+
+//   Delete Account
+
+  Future<void> deleteAccount(BuildContext context) async {
+    try {
+      await _auth.currentUser!.delete();
+    } on FirebaseAuthException catch(e) {
+      showSnackBar(context, e.message!);
+    }
   }
 }

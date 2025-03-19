@@ -34,23 +34,15 @@ class _LoginScreenState extends State<LoginScreen> {
               text: 'Email/Password Login',
             ),
             CustomButton(
-                onTap: () {
-                  Navigator.pushNamed(context, PhoneScreen.routeName);
-                },
-                text: 'Phone Sign In'),
-            CustomButton(
               onTap: () {
-                FirebaseAuthMethods(FirebaseAuth.instance).signInWithGoogle(context);
+                context.read<FirebaseAuthMethods>().signInWithGoogle(context);
               },
               text: 'Google Sign In',
             ),
             CustomButton(
               onTap: () {
-              },
-              text: 'Facebook Sign In',
-            ),
-            CustomButton(
-              onTap: () {
+                FirebaseAuthMethods(FirebaseAuth.instance)
+                    .signInAnonymously(context);
               },
               text: 'Anonymous Sign In',
             ),

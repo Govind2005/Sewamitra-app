@@ -25,7 +25,7 @@ class _EmailPasswordSignupState extends State<EmailPasswordSignup> {
   }
 
   void signUpUser() async {
-    FirebaseAuthMethods(FirebaseAuth.instance).signUpWithEmail(
+    context.read<FirebaseAuthMethods>().signUpWithEmail(
         email: emailController.text,
         password: passwordController.text,
         context: context);
