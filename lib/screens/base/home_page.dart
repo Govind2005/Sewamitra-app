@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sewamitra/screens/base/volunteer_page.dart';
 import 'package:sewamitra/services/firebase_auth_methods.dart';
 import 'package:sewamitra/widgets/custom_button.dart';
 
@@ -142,15 +143,20 @@ class HomePage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // Add your onPressed functionality here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => VolunteerPage()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
                       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                     child: Text(
-                      'Get Help Now',
+                      'Help as volunteer',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
