@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:sewamitra/screens/base/volunteer_page.dart';
 import 'package:sewamitra/services/firebase_auth_methods.dart';
 import 'package:sewamitra/widgets/custom_button.dart';
+import 'package:sewamitra/services/survival_guide.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -102,65 +103,45 @@ class HomePage extends StatelessWidget {
 
                 SizedBox(height: 40),
 
-                // "Our Services" section with a box around it
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Container(
-                    padding: const EdgeInsets.all(20.0),
-                    decoration: BoxDecoration(
-                      color: Colors.blueAccent.withOpacity(0.6),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Column(
-                      children: [
-                        Text(
-                          'Our Services',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          'Get Help Now',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-
                 SizedBox(height: 40),
 
                 // Button to get help
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Add your onPressed functionality here
+                  child: GestureDetector(
+                    onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => VolunteerPage()),
+                        MaterialPageRoute(builder: (context) => SurvivalGuidePage()),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
+                    child: Container(
+                      padding: const EdgeInsets.all(20.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent.withOpacity(0.6),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                    ),
-                    child: Text(
-                      'Help as volunteer',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min, // To avoid extra space
+                        children: [
+                          Text(
+                            'Our Services',
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Get Help Now',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -183,6 +164,7 @@ class HomePage extends StatelessWidget {
                   },
                   text: 'Delete Account',
                 ),
+                SizedBox(height: 60),
               ],
             ),
           ),
