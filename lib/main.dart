@@ -38,7 +38,9 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Firebase Auth Demo',
           theme: ThemeData(
             primarySwatch: Colors.blue,
+            fontFamily: 'Roboto'
           ),
+
           home: const AuthWrapper(),
           routes: {
             EmailPasswordSignup.routeName: (context) =>
@@ -56,11 +58,7 @@ class AuthWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final firebaseUser = context.watch<User?>();
-    if(firebaseUser != null) {
       return const HomeScreen();
-    }
-    return const LoginScreen();
   }
 }
 
