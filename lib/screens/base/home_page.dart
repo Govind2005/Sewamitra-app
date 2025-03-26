@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sewamitra/chatbot/chatbot_screen.dart';
 import 'package:sewamitra/screens/base/volunteer_page.dart';
 import 'package:sewamitra/services/survival_guide.dart';
 
@@ -210,6 +211,19 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    ChatbotScreen()), // Replace with your chatbot page
+          );
+        },
+        child: Icon(Icons.chat, color: Colors.white),
+        backgroundColor: Colors.blueAccent,
+        elevation: 5,
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sewamitra/screens/base/form_page.dart';
+import 'package:sewamitra/screens/base/donation_page.dart';
+import 'package:sewamitra/screens/base/other_help.dart';  // Import the DonationPage
 
 class HelpingWays extends StatelessWidget {
   const HelpingWays({super.key});
@@ -94,11 +96,23 @@ class HelpingWays extends StatelessWidget {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(15),
                         onTap: () {
-                          // Handle tap
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => FormPage()),
-                          );
+                          // Check if it's the Donation button and navigate accordingly
+                          if (titles[index] == 'Donation') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const DonationPage()), // Navigate to DonationPage
+                            );
+                          } else if (titles[index] == 'Other') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const OtherHelpPage()), // Navigate to OtherHelpPage
+                            );
+                          } else {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => FormPage()), // Navigate to FormPage for other options
+                            );
+                          }
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
