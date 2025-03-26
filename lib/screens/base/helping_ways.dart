@@ -16,8 +16,8 @@ class HelpingWays extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.red.shade50,
-                  Colors.red.shade100,
+                  Colors.blue.shade50,
+                  Colors.blue.shade100,
                 ],
               ),
               borderRadius: const BorderRadius.only(
@@ -36,7 +36,7 @@ class HelpingWays extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
-                        color: Colors.red,
+                        color: Colors.blue, // Changed to blue for better readability
                         fontFamily: 'Poppins',
                       ),
                     ),
@@ -45,7 +45,7 @@ class HelpingWays extends StatelessWidget {
                       'Help out the unfortunate victims.\nEvery drop counts',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.red.shade700,
+                        color: Colors.blue.shade700, // Darker blue for text readability
                         height: 1.5,
                         fontFamily: 'Poppins',
                       ),
@@ -73,8 +73,8 @@ class HelpingWays extends StatelessWidget {
                     'Water',
                     'Medicine',
                     'Beds',
-                    'Humans',
-                    'Donation'
+                    'Donation',
+                    'Other'
                   ];
 
                   return Container(
@@ -83,7 +83,7 @@ class HelpingWays extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.red.withOpacity(0.1),
+                          color: Colors.blue.withOpacity(0.1),
                           offset: const Offset(0, 4),
                           blurRadius: 8,
                         ),
@@ -108,12 +108,12 @@ class HelpingWays extends StatelessWidget {
                                 width: 45,
                                 height: 45,
                                 decoration: BoxDecoration(
-                                  color: Colors.red.withOpacity(0.1),
+                                  color: Colors.blue.withOpacity(0.1),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Icon(
                                   _getIconForIndex(index),
-                                  color: Colors.red,
+                                  color: Colors.blue, // Updated icon color to blue
                                   size: 22,
                                 ),
                               ),
@@ -124,6 +124,7 @@ class HelpingWays extends StatelessWidget {
                                   style: const TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.blue, // Updated text color to blue
                                     fontFamily: 'Poppins',
                                   ),
                                 ),
@@ -143,6 +144,7 @@ class HelpingWays extends StatelessWidget {
     );
   }
 
+  // Helper method to get icon based on the index
   IconData _getIconForIndex(int index) {
     switch (index) {
       case 0:
@@ -154,7 +156,7 @@ class HelpingWays extends StatelessWidget {
       case 3:
         return Icons.bed;
       case 4:
-        return Icons.volunteer_activism;
+        return Icons.attach_money;
       case 5:
         return Icons.add;
       default:
