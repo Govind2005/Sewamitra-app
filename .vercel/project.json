@@ -1,1 +1,15 @@
-{"projectId":"prj_YB0IdHrREsfCd0GJ4KdQekVaAmNc","orgId":"team_3sguRUmZzYHGGGFfrCrhDlMR"}
+{
+  "projectId": "prj_YB0IdHrREsfCd0GJ4KdQekVaAmNc",
+  "orgId": "team_3sguRUmZzYHGGGFfrCrhDlMR",
+  "settings": {
+    "createdAt": 1743416639396,
+    "framework": null,
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "22.x"
+  }
+}

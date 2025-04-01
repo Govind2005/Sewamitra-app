@@ -1,0 +1,2 @@
+E:/SewaMitra/Sewamitra-app/android/app/.cxx/Debug/596l1f1i/x86_64/CMakeFiles/edit_cache.dir
+E:/SewaMitra/Sewamitra-app/android/app/.cxx/Debug/596l1f1i/x86_64/CMakeFiles/rebuild_cache.dir

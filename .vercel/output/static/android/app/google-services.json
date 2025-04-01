@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "221245640408",
+    "project_id": "sewamitra-f60bb",
+    "storage_bucket": "sewamitra-f60bb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221245640408:android:44593c7066b3c827ad51ad",
+        "android_client_info": {
+          "package_name": "com.example.sewamitra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221245640408-r653iujgq1827ucv5tu15onvdcduldj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sewamitra",
+            "certificate_hash": "a695b7383c2d8df422dbab58a4dc727807876194"
+          }
+        },
+        {
+          "client_id": "221245640408-odn39ng8hgeu2g0duo5m6cu1lhbgr5po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1_PxHfPeI-WLxCCjTQPEA2b07krlLQgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221245640408-odn39ng8hgeu2g0duo5m6cu1lhbgr5po.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "221245640408-q42b61ceiu80a3kr6vgabooc1qm1ng76.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sewamitra"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
